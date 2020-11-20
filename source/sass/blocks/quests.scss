@@ -56,10 +56,6 @@
     border: none;
     padding-right: 0;
   }
-
-  &:nth-of-type(2n) .quests__icon-img {
-    width: 36px;
-  }
 }
 
 .quests__link {
@@ -156,12 +152,13 @@
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
-    mask-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(184, 184, 184, 1) 95%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%);
+    // mask-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(184, 184, 184, 1) 95%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%);
   }
 
   .quests__list {
     width: 768px;
     overflow: hidden;
+    margin-bottom: 20px;
   }
 
   .quests__item {
@@ -177,7 +174,7 @@
   }
 
   .quests__icon-img {
-    width: 23px;
+    width: 27px;
   }
 
   .quests__list-container {

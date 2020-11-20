@@ -836,8 +836,6 @@ input[type="radio"].visually-hidden {
   .quests__item:last-of-type {
     border: none;
     padding-right: 0; }
-  .quests__item:nth-of-type(2n) .quests__icon-img {
-    width: 36px; }
 
 .quests__link {
   text-decoration: none;
@@ -916,14 +914,11 @@ input[type="radio"].visually-hidden {
     width: 100%;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none;
-    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(95%, #b8b8b8), color-stop(100%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
-    -webkit-mask-image: linear-gradient(90deg, white 0%, #b8b8b8 95%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%);
-            mask-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(95%, #b8b8b8), color-stop(100%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
-            mask-image: linear-gradient(90deg, white 0%, #b8b8b8 95%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%); }
+    -ms-overflow-style: none; }
   .quests__list {
     width: 768px;
-    overflow: hidden; }
+    overflow: hidden;
+    margin-bottom: 20px; }
   .quests__item {
     padding-right: 15px;
     width: auto;
@@ -933,7 +928,7 @@ input[type="radio"].visually-hidden {
     line-height: 40px;
     margin-bottom: 37px; }
   .quests__icon-img {
-    width: 23px; }
+    width: 27px; }
   .quests__list-container {
     margin: 0 auto;
     width: 328px; } }
