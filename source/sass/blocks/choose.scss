@@ -168,7 +168,7 @@
   }
 }
 
-.choose__list input[type="checkbox"]:checked + label {
+.choose__list input[type="radio"]:checked + label {
   background-image: linear-gradient(180deg, #2cdb52 0%, #13ba19 100%);
   background-color: #2cdb52;
   border: none;
@@ -293,7 +293,7 @@
     }
   }
 
-  .choose__heading {
+  .choose h2 {
     font-size: 42px;
     line-height: 46.2px;
     letter-spacing: 0.001em;
@@ -302,7 +302,7 @@
 
   .choose__link-container {
     margin: 0;
-    margin-bottom: 17px;
+    margin-bottom: 23px;
     width: 258px;
   }
 
@@ -320,7 +320,7 @@
     margin-bottom: 8px;
   }
 
-  .choose__item {
+  .choose__list li {
     margin-right: 24px;
   }
 
@@ -341,5 +341,10 @@
   .choose__info-text span {
     width: auto;
     display: initial;
+  }
+
+  .choose__info-date {
+    display: inline-block;
+    vertical-align: middle;
   }
 }

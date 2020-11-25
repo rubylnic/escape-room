@@ -37,6 +37,13 @@
   padding: 22px 51px;
   border-radius: 40px;
   text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $white;
+    color: $yellow;
+  }
 }
 
 @include media-mobile-tablet {

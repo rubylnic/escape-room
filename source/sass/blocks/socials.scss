@@ -16,23 +16,23 @@
   }
 
   &--instagram {
-    background: url("../../img/instagram-gray.svg") 0 0 no-repeat;
+    background: url("../img/instagram-gray.svg") 0 0 no-repeat;
 
     &:hover,
     &:focus,
     &:active {
-      background: url("../../img/instagram.svg") 0 0 no-repeat;
+      background: url("../img/instagram.svg") 0 0 no-repeat;
       cursor: url("../img/cursor.png"), url("../img/cursor.cur"), pointer;
     }
   }
 
   &--vk {
-    background: url("../../img/vk-gray.svg") 0 0 no-repeat;
+    background: url("../img/vk-gray.svg") 0 0 no-repeat;
 
     &:hover,
     &:focus,
     &:active {
-      background: url("../../img/vk.svg") 0 0 no-repeat;
+      background: url("../img/vk.svg") 0 0 no-repeat;
       cursor: url("../img/cursor.png"), url("../img/cursor.cur"), pointer;
     }
   }
@@ -47,11 +47,11 @@
     }
 
     &--instagram {
-      background: url("../../img/instagram-m.svg") 0 0 no-repeat;
+      background: url("../img/instagram-m.svg") 0 0 no-repeat;
     }
 
     &--vk {
-      background: url("../../img/vk-m.svg") 0 0 no-repeat;
+      background: url("../img/vk-m.svg") 0 0 no-repeat;
     }
   }
 }

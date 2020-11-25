@@ -131,7 +131,7 @@
   var storage = '';
 
   try {
-    storage = localStorage.getItem('login');
+    storage = localStorage.getItem('name');
   } catch (err) {
     isStorageSupport = false;
   }
@@ -146,9 +146,9 @@
     html.style.overflow = 'hidden';
 
     if (storage) {
-      name.value = storage;
-      email.value = storage;
-      comment.value = storage;
+      name.value = localStorage.getItem('name');;
+      email.value = localStorage.getItem('email');;
+      comment.value = localStorage.getItem('comment');;
     }
 
     name.focus();
@@ -173,8 +173,16 @@
   document.addEventListener('keydown', escPressHandler);
   btnOpen.addEventListener('keydown', enterPressHandler);
 
-  form.addEventListener('submit', function (evt) {
+  submit.addEventListener('click', function (evt) {
+    var validity = email.checkValidity();
+    if (validity === true) {
+      errorMessage.classList.add('modal-question__error-message--hidden');
+    } else {
+      errorMessage.classList.remove('modal-question__error-message--hidden')
+    }
+  });
 
+  form.addEventListener('submit', function (evt) {
     if (!name.value || !email.value || !checkbox.checked) {
       evt.preventDefault();
     } else {
@@ -185,13 +193,5 @@
       }
     }
 
-  });
-  submit.addEventListener('click', function (evt) {
-    var validity = email.checkValidity();
-    if (validity === false) {
-      evt.preventDefault();
-      errorMessage.classList.add('modal-question__error-message--hidden');
-    }
-    errorMessage.classList.remove('modal-question__error-message--hidden');
   });
 })();

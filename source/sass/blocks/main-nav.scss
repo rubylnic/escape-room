@@ -1,5 +1,5 @@
 .main-nav {
-  min-width: 70.3%;
+  min-width: 73.5%;
   text-align: right;
   display: flex;
   justify-content: space-between;
@@ -8,11 +8,11 @@
 
 .main-nav__list {
   @include list;
+  max-width: 810px;
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 15px;
-
-  &:first-of-type {
-    margin-right: 35px;
-  }
+  margin-left: 40px;
 
   &--contacts {
     .main-nav__item {
@@ -28,7 +28,8 @@
 .main-nav__item {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 42px;
+  margin-right: 46px;
+  margin-bottom: 15px;
 
   &:last-of-type {
     margin-right: 0;
@@ -105,6 +106,7 @@
       padding-bottom: 40px;
 
       .main-nav__item {
+        margin-right: 0;
         margin-bottom: 20px;
 
         &:last-of-type {

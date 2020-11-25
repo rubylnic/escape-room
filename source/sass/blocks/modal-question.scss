@@ -80,8 +80,14 @@
   width: 400px;
   background-color: rgba(0, 0, 0, 0);
   border: solid 1px $white-t;
+  border-radius: 0;
   padding: 16px 24px;
   margin-bottom: 30px;
+  color: $white;
+
+  &::placeholder {
+    color: #e5e5e5;
+  }
 
   &:hover,
   &:focus {
@@ -97,6 +103,10 @@
   border: solid 1px $white-t;
   padding: 16px 24px;
   margin-bottom: 24px;
+
+  &::placeholder {
+    color: #e5e5e5;
+  }
 
   &:hover,
   &:focus {
