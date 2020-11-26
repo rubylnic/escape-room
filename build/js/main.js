@@ -120,6 +120,7 @@
   var modalContainer = modal.querySelector('.modal-question__container');
   var submit = document.querySelector('.modal-question__form-container button');
   var errorMessage = document.querySelector('.modal-question__error-message');
+  var errorMessageCheckbox = document.querySelector('.modal-question__error-message-checkbox');
 
   var form = modal.querySelector('form');
   var name = modal.querySelector('[name=modal-name]');
@@ -173,25 +174,39 @@
   document.addEventListener('keydown', escPressHandler);
   btnOpen.addEventListener('keydown', enterPressHandler);
 
-  submit.addEventListener('click', function (evt) {
+  var errorHandler = function () {
     var validity = email.checkValidity();
     if (validity === true) {
       errorMessage.classList.add('modal-question__error-message--hidden');
     } else {
       errorMessage.classList.remove('modal-question__error-message--hidden')
     }
-  });
+  }
+
+  var errorCheckboxHandler = function (evt) {
+    if (!checkbox.checked) {
+      evt.preventDefault();
+      errorMessageCheckbox.classList.remove('modal-question__error-message-checkbox--hidden');
+    } else {
+      errorMessageCheckbox.classList.add('modal-question__error-message-checkbox--hidden')
+    }
+  }
+
+  submit.addEventListener('click', errorHandler);
+  submit.addEventListener('click', errorCheckboxHandler);
 
   form.addEventListener('submit', function (evt) {
-    if (!name.value || !email.value || !checkbox.checked) {
+    if (!name.value || !email.value) {
       evt.preventDefault();
-    } else {
+      name.setCustomValidity('');
+      email.setCustomValidity('');
+    }
+    else {
       if (isStorageSupport) {
         localStorage.setItem('name', name.value);
         localStorage.setItem('email', email.value);
         localStorage.setItem('comment', comment.value);
       }
     }
-
   });
 })();

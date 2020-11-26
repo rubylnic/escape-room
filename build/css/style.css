@@ -2062,7 +2062,8 @@ input[type="radio"].visually-hidden {
   background-color: rgba(0, 0, 0, 0);
   border: solid 1px #e5e5e5;
   padding: 16px 24px;
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  color: #ffffff; }
   .modal-question textarea::-webkit-input-placeholder {
     color: #e5e5e5; }
   .modal-question textarea::-moz-placeholder {
@@ -2113,6 +2114,16 @@ input[type="radio"].visually-hidden {
   margin-top: -27px;
   margin-bottom: 27px; }
   .modal-question__error-message--hidden {
+    display: none; }
+
+.modal-question__error-message-checkbox {
+  position: relative;
+  top: 15px;
+  left: 35px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2; }
+  .modal-question__error-message-checkbox--hidden {
     display: none; }
 
 .modal-question__rules {

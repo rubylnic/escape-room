@@ -103,6 +103,7 @@
   border: solid 1px $white-t;
   padding: 16px 24px;
   margin-bottom: 24px;
+  color: $white;
 
   &::placeholder {
     color: #e5e5e5;
@@ -149,6 +150,17 @@
   display: block;
   margin-top: -27px;
   margin-bottom: 27px;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.modal-question__error-message-checkbox {
+  position: relative;
+  top: 15px;
+  left: 35px;
+  order: 2;
 
   &--hidden {
     display: none;
